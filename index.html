@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaming Website - Chess</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animations.css">
+	<link rel="stylesheet" href="css/font-awesome5.css">
+
+	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+<style>
+  #nav,
+  #about {
+    background-color: #181717;
+background-image: linear-gradient(77deg, #181717 0%, #e2b147 100%);
+
+
+  }
+
+  .carousel .carousel-item {
+    height: 600px;
+  }
+
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .carousel-caption h3,
+  .carousel-caption p {
+    color: #fff;
+  }
+
+
+  #about {
+    height: 100%;
+    background-image:url(./asset/images/about.jpg);
+    background-repeat:repeat;
+    height: 400px;
+    
+  }
+  #about-p{
+    margin-top: 100px;
+   margin-left: 100px;
+  }
+  .chessboard {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      border: 1px solid black;
+    }
+
+    .chessboard > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      border: 1px solid black;
+      cursor: pointer;
+    }
+
+    .chessboard .black {
+      background-color: gray;
+    }
+
+    .selected {
+      background-color: #99ff99 !important;
+    }
+
+    .valid-move {
+      background-color: #99ccff !important;
+    }
+
+    .piece {
+      font-size: 30px;
+    }
+    #features-head{
+      background-image: url(./asset/images/featuresbg.jpg);
+      height: 500px;
+    }
+    #head{
+      margin-top: 70px;
+    }
+</style>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="nav">
+    <a class="navbar-brand" href="#"><img src="./asset/images/logo.png"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Tutorials</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Play</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Leaderboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Banner Section -->
+  <section class="carousel page1" id="c1">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+</ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./asset/images/image1.jpg" alt="Image 1" class="d-block w-100">
+          <div class="carousel-caption">
+            <h3>ACADEMIC Chess</h3>
+            <p>We are dedicated to broadening and developing chess as art, recreation, and as a significant element of
+              culture in Northern California.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./asset/images/image1.jpg" alt="Image 2" class="d-block w-100">
+          <div class="carousel-caption">
+            <h4>ACADEMIC Chess</h4>
+
+            <p>We are dedicated to broadening and developing chess as art, recreation, and as a significant element of
+              culture in Northern California.</p>
+
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./asset/images/image1.jpg" alt="Image 3" class="d-block w-100">
+          <div class="carousel-caption">
+            <h5>ACADEMIC Chess</h5>
+
+            <p>We are dedicated to broadening and developing chess as art, recreation, and as a significant element of
+              culture in Northern California.</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </section> 
+  
+
+
+
+ 	<!-- Start Section About -->
+   <section class="about_us ls s-overlay mobile-overlay s-py-xl-270 s-py-lg-130 s-py-md-90 s-py-60 c-gutter-0 container-px-xl-0" id="about">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-lg-6 text-center text-sm-left">
+          <div class="special-column-center d-block d-sm-flex" id="about-p">
+            <div class="special-class" style="padding-right: 100px;">
+              <p class="special-heading text-center big thin color-main">
+                <span>01</span>
+              </p>
+              <p class="special-heading text-center text-uppercase sub-title2 color-darkgrey">
+                <span>
+                  about us
+                </span>
+              </p>
+              <div class="fw-divider-space divider-30 divider-lg-40"></div>
+              <a href="#" class="btn btn-maincolor medium-btn">Start now</a>
+              <div class="fw-divider-space divider-30 divider-sm-0"></div>
+            </div>
+
+            <div class="text-block with-left-space">
+              <p class="excerpt">
+                Kids Chess Club is a non-profit Company founded.
+              </p>
+              <p>
+                Our goal is to teach children in grades K-12 abstract concepts of planning, analysis and
+                strategy through the game of chess.
+              </p>
+              <p>
+                Kids will be excited to understand and amazed by the positive experience that chess offers.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Section About -->
+
+
+  <!-- Tutorials Section -->
+  <section class="tutorials">
+    <div class="container">
+
+      <h2>Tutorials</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="tutorial-card">
+            <img src="./asset/images/t1.jpg" alt="Tutorial 1">
+            <h3>Tutorial 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="tutorial-card">
+            <img src="./asset/images/t2.jpg" alt="Tutorial 2">
+            <h3>Tutorial 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="tutorial-card">
+            <img src="./asset/images/t3.jpg" alt="Tutorial 3">
+            <h3>Tutorial 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- end of tutorial section -->
+
+  <!-- chess board -->
+  <div class="chessboard">
+    <div></div><div class="black"><span class="piece">&#9820;</span></div><div></div><div class="black"><span class="piece">&#9819;</span></div><div></div><div class="black"><span class="piece">&#9822;</span></div><div></div><div class="black"><span class="piece">&#9818;</span></div>
+    <div class="black"><span class="piece">&#9823;</span></div><div></div><div class="black"><span class="piece">&#9823;</span></div><div></div><div class="black"><span class="piece">&#9823;</span></div><div></div><div class="black"><span class="piece">&#9823;</span></div><div></div>
+    <div></div><div class="black"></div><div></div><div class="black"></div><div></div><div class="black"></div><div></div><div class="black"></div>
+    <div class="black"></div><div></div><div class="black"></div><div></div><div class="black"></div><div></div><div class="black"></div><div></div>
+    <div></div><div class="black"></div><div></div><div class="black"></div><div></div><div class="black"></div><div></div><div class="black"></div>
+    <div class="black"></div><div></div><div class="black"></div><div></div><div class="black"></div><div></div><div class="black"></div><div></div>
+    <div></div><div class="black"><span class="piece">&#9817;</span></div><div></div><div class="black"><span class="piece">&#9817;</span></div><div></div><div class="black"><span class="piece">&#9817;</span></div><div></div><div class="black"><span class="piece">&#9817;</span></div>
+    <div class="black"><span class="piece">&#9814;</span></div><div></div><div class="black"><span class="piece">&#9816;</span></div><div></div><div class="black"><span class="piece">&#9815;</span></div><div></div><div class="black"><span class="piece">&#9813;</span></div><div></div>
+  </div>
+
+ 
+<!-- Start Section Features -->
+<section class="ds s-py-xl-150 s-py-lg-130 s-pt-md-90 s-pb-md-60 s-pt-60 s-pb-30 c-gutter-0 with-particles" id="features-head">
+  <div id="features" class="particles-js"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 " id="head">
+        <p class="special-heading text-center color-main sub-title">
+          <span class="text-uppercase">
+            advantages
+          </span>
+        </p>
+        <h2 class="special-heading text-center">
+          <span class="text-capitalize ">
+            our <span class="color-main">features</span>
+          </span>
+        </h2>
+        <p class="special-heading text-center color-darkgrey">
+          <span>
+            We are dedicated to broadening and developing chess as art, recreation, and as a significant element of culture in Northern California.
+          </span>
+        </p>
+        <div class="fw-divider-space divider-30 divider-lg-60"></div>
+      </div>
+      <div class="col-md-6 col-lg-4 text-center text-sm-left border-right border-bottom">
+        <div class="media padding">
+          <div class="icon-styled color-main fs-52">
+            <i class="ico ico-chess"></i>
+          </div>
+
+          <div class="media-body">
+            <h6>
+              Replay Training
+            </h6>
+            <p>
+              Replaying games. Since the very beginning of computers
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 text-center text-sm-left border-right border-bottom">
+        <div class="media padding">
+          <div class="icon-styled color-main fs-52">
+            <i class="ico ico-strategy"></i>
+          </div>
+
+          <div class="media-body">
+            <h6>
+              Search Technology
+            </h6>
+            <p>
+              Both have now been enhanced with a long list of samples
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 text-center text-sm-left border-bottom">
+        <div class="media padding">
+          <div class="icon-styled color-main fs-52">
+            <i class="ico ico-strategy-1"></i>
+          </div>
+
+          <div class="media-body">
+            <h6>
+              Fashion Index
+            </h6>
+            <p>
+              A tool to easily create beautiful chess illustrations
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 text-center text-sm-left border-right">
+        <div class="media padding">
+          <div class="icon-styled color-main fs-52">
+            <i class="ico ico-strategy-2"></i>
+          </div>
+
+          <div class="media-body">
+            <h6>
+              Plan Explorer
+            </h6>
+            <p>
+              You just enter a search position the program will automatically deduce
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 text-center text-sm-left border-right">
+        <div class="media padding">
+          <div class="icon-styled color-main fs-52">
+            <i class="ico ico-strategy-3"></i>
+          </div>
+
+          <div class="media-body">
+            <h6>
+              Ray Tracing 3D
+            </h6>
+            <p>
+              Assume you want to search for a pattern a pawn
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 text-center text-sm-left  ">
+        <div class="media padding">
+          <div class="icon-styled color-main fs-52">
+            <i class="ico ico-strategy-4"></i>
+          </div>
+
+          <div class="media-body">
+            <h6>
+              Chess Movies
+            </h6>
+            <p>
+              The statistics function in the game list has been enhanced
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Section Features -->
+
+<!-- Start Section Partners -->
+<section class="ls ms s-py-lg-100 s-py-md-90 s-py-60">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="owl-carousel" data-center="false" data-autoplay="true" data-margin="20" data-loop="true" data-responsive-lg="8" data-responsive-md="4" data-responsive-sm="3" data-responsive-xs="2">
+          <a class="text-center d-block" href="#">
+            <img src="./asset/images/l1.png" alt="img">
+          </a>
+          <a class="text-center d-block" href="#">
+            <img src="./asset/images/l2.png" alt="img">
+          </a>
+          <a class="text-center d-block" href="#">
+            <img src="./asset/images/l3.png" alt="img">
+          </a>
+          <a class="text-center d-block" href="#">
+            <img src="./asset/images/l4.png" alt="img">
+          </a>
+          <a class="text-center d-block" href="#">
+            <img src="./asset/images/l5.png" alt="img">
+          </a>
+          <a class="text-center d-block" href="#">
+            <img src="./asset/images/l7.png" alt="img">
+          </a>
+          <a class="text-center d-block" href="#">
+            <img src="./asset/images/l8.png" alt="img">
+          </a>
+          <a class="text-center d-block" href="#">
+            <img src="./asset/images/l9.png" alt="img">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Section Partners -->
+  <!-- Footer -->
+  <footer class="page_footer footer-1 text-center text-sm-left  ds s-pt-60 s-pb-30 c-mb-30 s-bordertop">
+    <div class="container-fluid">
+      <div class="row justify-content-center align-items-center">
+
+        <div class="col-xl-2 col-12 text-xl-left text-center  animate" data-animation="fadeInUp">
+          <a href="./" class="logo">
+            <img src="img/logo.png" alt="">
+          </a>
+        </div>
+
+        <div class="col-xl-8 col-12 text-center animate" data-animation="fadeInUp">
+
+          <div class="widget widget_nav_menu">
+            <ul class="list-unstyled">
+              <li>
+                <a href="index.html">About</a>
+              </li>
+
+              <li>
+                <a href="http://chessmood.com/courses">Courses</a>
+              </li>
+              <li>
+                <a href="http://chessmood.com/blog">Blog</a>
+              </li>
+              <li>
+                <a href="https://www.chesscomshop.com/">Shop</a>
+              </li>
+              <li>
+                <a href="">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xl-2 col-12 text-center text-xl-right animate" data-animation="fadeInUp">
+          <span class="social-icons">
+            <a href="#" class="fab fab fa-facebook-f @@iconClass" title="facebook"></a>
+            <a href="#" class="fab fa-telegram-plane @@iconClass" title="telegram"></a>
+            <a href="#" class="fab fa-linkedin-in @@iconClass" title="linkedin"></a>
+            <a href="#" class="fab fa-instagram @@iconClass" title="instagram"></a>
+          </span>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  <section class="page_copyright copyright1 ds s-pt-70 s-pb-60 s-bordertop">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12">
+          <div class="widget widget_mailchimp">
+
+
+            <form class="signup" action="/">
+
+              <i class="far fa-envelope"></i>
+              <input name="email" type="email" class="form-control mailchimp_email" placeholder="Email address">
+
+              <button type="submit" class="search-submit">
+                <span class="screen-reader-text">
+                  Subscribe
+                </span>
+              </button>
+              <div class="response"></div>
+            </form>
+
+          </div>
+        </div>
+        <div class="col-md-12 text-center">
+
+          <p>&copy; Copyright <span class="copyright_year">2019</span> All Rights Reserved</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const squares = Array.from(document.querySelectorAll('.chessboard > div'));
+      const pieces = Array.from(document.querySelectorAll('.piece'));
+      const validMoves = [];
+
+      let currentPlayer = 1;
+      let selectedPiece = null;
+
+      function handleSquareClick(square, index) {
+        if (selectedPiece && validMoves.includes(index)) {
+          movePiece(index);
+          return;
+        }
+
+        if (square.classList.contains('selected')) {
+          square.classList.remove('selected');
+          selectedPiece = null;
+          validMoves.length = 0;
+        } else if (square.firstElementChild && currentPlayer === 1) {
+          square.classList.add('selected');
+          selectedPiece = square.firstElementChild;
+          const pieceIndex = squares.findIndex((sq) => sq.contains(selectedPiece));
+          calculateValidMoves(pieceIndex);
+        }
+      }
+
+      function movePiece(destinationIndex) {
+        const selectedSquare = squares.find((sq) => sq.contains(selectedPiece));
+        const destinationSquare = squares[destinationIndex];
+
+        if (destinationSquare.classList.contains('valid-move')) {
+          destinationSquare.appendChild(selectedPiece);
+          selectedSquare.classList.remove('selected');
+          selectedPiece = null;
+          validMoves.length = 0;
+          currentPlayer = currentPlayer === 1 ? -1 : 1;
+        }
+      }
+
+      function calculateValidMoves(pieceIndex) {
+        validMoves.length = 0;
+        // Logic for calculating valid moves based on piece type and position
+        // Add valid move indices to the `validMoves` array
+
+        // Example: Pawn movement for the initial setup
+        if (selectedPiece.classList.contains('piece') && selectedPiece.innerHTML === '♟') {
+          const forwardOneIndex = pieceIndex + (8 * currentPlayer);
+          const forwardTwoIndex = pieceIndex + (16 * currentPlayer);
+
+          if (!squares[forwardOneIndex].firstElementChild) {
+            validMoves.push(forwardOneIndex);
+
+            if (!squares[forwardTwoIndex].firstElementChild && ((currentPlayer === 1 && pieceIndex < 24) || (currentPlayer === -1 && pieceIndex > 39))) {
+              validMoves.push(forwardTwoIndex);
+            }
+          }
+
+          // Add logic for capturing opponent pieces diagonally
+          // Example:
+          const captureLeftIndex = pieceIndex + (7 * currentPlayer);
+          const captureRightIndex = pieceIndex + (9 * currentPlayer);
+          if (squares[captureLeftIndex].firstElementChild && Math.abs(captureLeftIndex - pieceIndex) % 8 !== 7) {
+            validMoves.push(captureLeftIndex);
+          }
+          if (squares[captureRightIndex].firstElementChild && Math.abs(captureRightIndex - pieceIndex) % 8 !== 0) {
+            validMoves.push(captureRightIndex);
+          }
+        }
+
+        // Add logic for other chess piece movements
+        // Rook, knight, bishop, queen, and king movements
+
+        // Apply valid move styles
+        validMoves.forEach((index) => squares[index].classList.add('valid-move'));
+      }
+
+      squares.forEach((square, index) => {
+        square.addEventListener('click', () => handleSquareClick(square, index));
+      });
+    });
+  </script>
+ 
+</body>
+
+</html>
