@@ -12,8 +12,10 @@
 	<link rel="stylesheet" href="css/font-awesome5.css">
 
 	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
 </head>
 <style>
+  /* styles for nav and about sectiions */
   #nav,
   #about {
     background-color: #181717;
@@ -21,7 +23,7 @@ background-image: linear-gradient(77deg, #181717 0%, #e2b147 100%);
 
 
   }
-
+/* styles for carousel section */
   .carousel .carousel-item {
     height: 600px;
   }
@@ -37,7 +39,7 @@ background-image: linear-gradient(77deg, #181717 0%, #e2b147 100%);
     color: #fff;
   }
 
-
+/* stykes for about section */
   #about {
     height: 100%;
     background-image:url(./asset/images/about.jpg);
@@ -49,36 +51,18 @@ background-image: linear-gradient(77deg, #181717 0%, #e2b147 100%);
     margin-top: 100px;
    margin-left: 100px;
   }
-  .chessboard {
-      display: grid;
-      grid-template-columns: repeat(8, 1fr);
-      border: 1px solid black;
-    }
+ /* Chessboard styles */
+#chessboard{
+  background-image: url(./asset/images/chessboardbg.jpg);
+  height: 600px;
+  width: 100%;
+}
+#chessboard button{
+margin-left: 800px;
+margin-top: 200px;
+}
 
-    .chessboard > div {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: white;
-      border: 1px solid black;
-      cursor: pointer;
-    }
-
-    .chessboard .black {
-      background-color: gray;
-    }
-
-    .selected {
-      background-color: #99ff99 !important;
-    }
-
-    .valid-move {
-      background-color: #99ccff !important;
-    }
-
-    .piece {
-      font-size: 30px;
-    }
+    /* styles for features */
     #features-head{
       background-image: url(./asset/images/featuresbg.jpg);
       height: 500px;
@@ -86,6 +70,13 @@ background-image: linear-gradient(77deg, #181717 0%, #e2b147 100%);
     #head{
       margin-top: 70px;
     }
+/* styles for partners */
+.owl-carousel img{
+padding: 15px;
+}
+/* styles for footer                      
+
+*/
 </style>
 
 <body>
@@ -241,20 +232,23 @@ background-image: linear-gradient(77deg, #181717 0%, #e2b147 100%);
         </div>
       </div>
     </div>
+    
   </section>
 <!-- end of tutorial section -->
 
-  <!-- chess board -->
-  <div class="chessboard">
-    <div></div><div class="black"><span class="piece">&#9820;</span></div><div></div><div class="black"><span class="piece">&#9819;</span></div><div></div><div class="black"><span class="piece">&#9822;</span></div><div></div><div class="black"><span class="piece">&#9818;</span></div>
-    <div class="black"><span class="piece">&#9823;</span></div><div></div><div class="black"><span class="piece">&#9823;</span></div><div></div><div class="black"><span class="piece">&#9823;</span></div><div></div><div class="black"><span class="piece">&#9823;</span></div><div></div>
-    <div></div><div class="black"></div><div></div><div class="black"></div><div></div><div class="black"></div><div></div><div class="black"></div>
-    <div class="black"></div><div></div><div class="black"></div><div></div><div class="black"></div><div></div><div class="black"></div><div></div>
-    <div></div><div class="black"></div><div></div><div class="black"></div><div></div><div class="black"></div><div></div><div class="black"></div>
-    <div class="black"></div><div></div><div class="black"></div><div></div><div class="black"></div><div></div><div class="black"></div><div></div>
-    <div></div><div class="black"><span class="piece">&#9817;</span></div><div></div><div class="black"><span class="piece">&#9817;</span></div><div></div><div class="black"><span class="piece">&#9817;</span></div><div></div><div class="black"><span class="piece">&#9817;</span></div>
-    <div class="black"><span class="piece">&#9814;</span></div><div></div><div class="black"><span class="piece">&#9816;</span></div><div></div><div class="black"><span class="piece">&#9815;</span></div><div></div><div class="black"><span class="piece">&#9813;</span></div><div></div>
+<!-- star of chessboard -->
+<section>
+  <div id="chessboard">
+    <button> <a href="./chess.html">lets play</a></button>
   </div>
+</section>
+<!-- end of chess board -->
+      
+       
+        
+    
+      
+       
 
  
 <!-- Start Section Features -->
@@ -385,9 +379,9 @@ background-image: linear-gradient(77deg, #181717 0%, #e2b147 100%);
 <!-- Start Section Partners -->
 <section class="ls ms s-py-lg-100 s-py-md-90 s-py-60">
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-12">
-        <div class="owl-carousel" data-center="false" data-autoplay="true" data-margin="20" data-loop="true" data-responsive-lg="8" data-responsive-md="4" data-responsive-sm="3" data-responsive-xs="2">
+    <div class="row" >
+      <div class="col-12"  style="display: flex;">
+        <div class="owl-carousel"  style="display: flex;" data-center="false" data-autoplay="true" data-margin="20" data-loop="true" data-responsive-lg="8" data-responsive-md="4" data-responsive-sm="3" data-responsive-xs="2">
           <a class="text-center d-block" href="#">
             <img src="./asset/images/l1.png" alt="img">
           </a>
@@ -488,7 +482,7 @@ background-image: linear-gradient(77deg, #181717 0%, #e2b147 100%);
         </div>
         <div class="col-md-12 text-center">
 
-          <p>&copy; Copyright <span class="copyright_year">2019</span> All Rights Reserved</p>
+          <p>&copy; Copyright <span class="copyright_year">2023</span> All Rights Reserved</p>
         </div>
 
       </div>
@@ -501,88 +495,8 @@ background-image: linear-gradient(77deg, #181717 0%, #e2b147 100%);
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const squares = Array.from(document.querySelectorAll('.chessboard > div'));
-      const pieces = Array.from(document.querySelectorAll('.piece'));
-      const validMoves = [];
 
-      let currentPlayer = 1;
-      let selectedPiece = null;
-
-      function handleSquareClick(square, index) {
-        if (selectedPiece && validMoves.includes(index)) {
-          movePiece(index);
-          return;
-        }
-
-        if (square.classList.contains('selected')) {
-          square.classList.remove('selected');
-          selectedPiece = null;
-          validMoves.length = 0;
-        } else if (square.firstElementChild && currentPlayer === 1) {
-          square.classList.add('selected');
-          selectedPiece = square.firstElementChild;
-          const pieceIndex = squares.findIndex((sq) => sq.contains(selectedPiece));
-          calculateValidMoves(pieceIndex);
-        }
-      }
-
-      function movePiece(destinationIndex) {
-        const selectedSquare = squares.find((sq) => sq.contains(selectedPiece));
-        const destinationSquare = squares[destinationIndex];
-
-        if (destinationSquare.classList.contains('valid-move')) {
-          destinationSquare.appendChild(selectedPiece);
-          selectedSquare.classList.remove('selected');
-          selectedPiece = null;
-          validMoves.length = 0;
-          currentPlayer = currentPlayer === 1 ? -1 : 1;
-        }
-      }
-
-      function calculateValidMoves(pieceIndex) {
-        validMoves.length = 0;
-        // Logic for calculating valid moves based on piece type and position
-        // Add valid move indices to the `validMoves` array
-
-        // Example: Pawn movement for the initial setup
-        if (selectedPiece.classList.contains('piece') && selectedPiece.innerHTML === '♟') {
-          const forwardOneIndex = pieceIndex + (8 * currentPlayer);
-          const forwardTwoIndex = pieceIndex + (16 * currentPlayer);
-
-          if (!squares[forwardOneIndex].firstElementChild) {
-            validMoves.push(forwardOneIndex);
-
-            if (!squares[forwardTwoIndex].firstElementChild && ((currentPlayer === 1 && pieceIndex < 24) || (currentPlayer === -1 && pieceIndex > 39))) {
-              validMoves.push(forwardTwoIndex);
-            }
-          }
-
-          // Add logic for capturing opponent pieces diagonally
-          // Example:
-          const captureLeftIndex = pieceIndex + (7 * currentPlayer);
-          const captureRightIndex = pieceIndex + (9 * currentPlayer);
-          if (squares[captureLeftIndex].firstElementChild && Math.abs(captureLeftIndex - pieceIndex) % 8 !== 7) {
-            validMoves.push(captureLeftIndex);
-          }
-          if (squares[captureRightIndex].firstElementChild && Math.abs(captureRightIndex - pieceIndex) % 8 !== 0) {
-            validMoves.push(captureRightIndex);
-          }
-        }
-
-        // Add logic for other chess piece movements
-        // Rook, knight, bishop, queen, and king movements
-
-        // Apply valid move styles
-        validMoves.forEach((index) => squares[index].classList.add('valid-move'));
-      }
-
-      squares.forEach((square, index) => {
-        square.addEventListener('click', () => handleSquareClick(square, index));
-      });
-    });
-  </script>
+ 
  
 </body>
 

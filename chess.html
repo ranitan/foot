@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="description" content="Play chess in your browser. No Flash or plugins are required.">
+	<title>Play Chess Online</title>
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link type="text/plain" rel="author" href="/humans.txt" />
+	<link rel="canonical" href="https://quickchess.net" />
+	<meta property="og:title" content="Play Chess" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://quickchess.net" />
+	<meta property="og:image" content="https://quickchess.net/images/facebook.jpg" />
+	<meta property="og:site_name" content="Quick Chess" />
+	<meta property="og:description" content="Play chess in your browser. No Flash or plugins are required." />
+
+	<!--[if lt IE 9]>
+	  <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+	<link href="merged.css" rel="stylesheet">
+
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-51711788-1', 'quickchess.net');
+	ga('send', 'pageview');
+	</script>
+	<style>
+        body{
+           
+            background-image: url(./asset/images/wow.jpg);
+          
+        }
+      
+    </style>
+
+	
+</head>
+
+<body role="document">
+	<div id="showFenBox" title="Current Position - FEN" >
+		<span class="showFen"></span>
+		<br/><br />
+		<span>Use this URL to return to the game later:</span>
+		<br />
+		<a id="fenLink" href=""><span class="fenText"></span></a>
+	</div>
+	<div id="loadFenBox" title="Load FEN" style="display: none">
+		Reset the board to
+		<a href="//en.wikipedia.org/wiki/Forsyth%E2%80%93Edwards_Notation" target="_blank">FEN</a>
+		state <input id="textFen" type="text" />
+	</div>
+	<div class="navbar navbar-inverse" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="https://quickchess.net">quickchess.net</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Game <b class="caret"></b></a>
+						<ul class="dropdown-menu multi-level">
+							<li><a href="https://quickchess.net">New Game</a></li>
+							<li class="dropdown-submenu">
+								<a tabindex="-1" href="#">Difficulty</a>
+								<ul class="dropdown-menu difficulty">
+									<li><a id="level5" tabindex="-1" href="#">5 (Hardest)</a></li>
+									<li><a id="level4" href="#">4</a></li>
+									<li><a id="level3" class="bold" href="#">3 (Default)</a></li>
+									<li><a id="level2" href="#">2</a></li>
+									<li><a id="level1" href="#">1 (Easiest)</a></li>
+								</ul>
+							</li>
+							<li id="undo"><a href="#">Undo Move</a></li>
+							<li class="divider"></li>
+							
+						</ul>
+					</li>
+					<li id="aboutMenu"><a href="#">About</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--[if lte IE 8]>
+		<p class="browsehappy">You are using an <strong>outdated</strong> browser. This site uses advanced features in newer browsers to give you the best possible chess playing experience.
+			<br /><br />Please <a href="https://browsehappy.com/">upgrade your browser</a> to use this site.</p>
+	<![endif]-->
+	
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+	<script src="merged.js"></script>
+	
+	
+	
+
+</body>
+
+</html>
+
